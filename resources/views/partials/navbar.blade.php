@@ -1,3 +1,5 @@
+<link href="css/bootstrap.css" rel="stylesheet">
+
 <nav class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{ route('home') }}">UTS Laravel</a>
@@ -12,10 +14,10 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link {{ $active === 'home' ? 'active' : '' }}" href="{{ url('/home') }}">Home</a>
+              <a class="nav-link {{ $active === 'home' ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ $active === 'produk' ? 'active' : '' }}" href="{{ url('/produk') }}">Produk</a>
+              <a class="nav-link {{ $active === 'produk' ? 'active' : '' }}" href="{{ route('produk') }}">Produk</a>
             </li>
           </ul>
           <form class="d-flex mt-3" role="search">
@@ -26,3 +28,5 @@
       </div>
     </div>
   </nav>
+
+  <script src="/js/bootstrap.js"></script>
