@@ -21,5 +21,8 @@ Route::get('produk', function () {
 })->name('produk');
 
 Route::get('tambah', function() {
-    return view('tambah', ["active" => '']);
+
+    $jenis = ["Alat Tulis", "Elektronik", "Sembako"];
+
+    return view('tambah', ["active" => ''], compact("jenis"));
 })->name('tambah');

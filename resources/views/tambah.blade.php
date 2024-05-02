@@ -23,13 +23,18 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-label" for="jenis">Jenis Produk</label>
-                    <input class="form-control" type="text" name="jenis" placeholder="Input Jenis Produk">
+                    <select name="jenis" id="jenis" class="form-control">
+                        <option>Pilih Jenis</option>
+                        @for ($i = 0; $i < count($jenis); $i++)
+                            <option value="{{ $jenis[$i] }}">{{ $jenis[$i] }}</option>
+                        @endfor
+                    </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label class="form-label" for="harga">Harga</label>
-                    <input class="form-control" type="text" name="kode" placeholder="Input Harga">
+                    <input class="form-control" type="number" name="kode" placeholder="Input Harga">
                 </div>
                 <div class="col-md-6">
                     <button type="submit" class="btn btn-success form-control" style="margin-top: 3.3vh">Simpan</button>
