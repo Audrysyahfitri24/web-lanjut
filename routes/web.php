@@ -21,5 +21,5 @@ Route::get('produk', function () {
 })->name('produk');
 
 Route::get('tambah', function() {
-    return view('tambah');
+    return view('tambah', ["active" => '']);
 })->name('tambah');
